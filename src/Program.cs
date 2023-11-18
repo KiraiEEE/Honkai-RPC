@@ -44,7 +44,7 @@ internal static class Program
                 Debug.Print($"InLoop");
 
                 var miHoyo = true;
-                var handle = FindWindow("UnityWndClass", "Honkai Impact 3rd");
+                var handle = FindWindow("UnityWndClass", "Honkai Impact 3");
                 if (handle == IntPtr.Zero)
                 {
                     // hoyoverse
