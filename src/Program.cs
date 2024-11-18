@@ -35,47 +35,54 @@ internal static class Program
             using var clientImp = new DiscordRpcClient(Impact);
             clientImp.Initialize();
 
-            var playing = false;
+            var isPlaying = false;
+			var delay = 1000;
 
-            while (true)
-            {
-                await Task.Delay(1000);
+			while (true)
+			{
+				await Task.Delay(delay);
 
-                Debug.Print($"InLoop");
+				Debug.Print($"InLoop");
 
-                var miHoyo = true;
-                var handle = FindWindow("UnityWndClass", "Honkai Impact 3rd");
-                if (handle == IntPtr.Zero)
-                {
-                    // hoyoverse
-                    miHoyo = false;
-                    handle = FindWindow("UnityWndClass", "Honkai: Star Rail");
-                }
+				var isMiHoYo = true;
+				var handle = FindWindow("UnityWndClass", "Honkai Impact 3rd");
 
-                if (handle == IntPtr.Zero)
-                {
-                    Debug.Print($"Not found game process.");
-                    playing = false;
+				if (handle == IntPtr.Zero)
+				{
+					var bh3Process = Process.GetProcessesByName("bh3").FirstOrDefault();
+					if (bh3Process != null)
+					{
+                        isMiHoYo = true;
+						handle = bh3Process.MainWindowHandle;
+					}
+				}
 
-                    if (clientImp.CurrentPresence != null)
-                    {
-                        clientImp.ClearPresence();
-                    }
-                    continue;
-                }
+				if (handle == IntPtr.Zero)
+				{
+					Debug.Print($"Not found game process.");
+					isPlaying = false;
+                    delay = 1000;
 
-                try
+					if (clientImp.CurrentPresence != null)
+					{
+						clientImp.ClearPresence();
+					}
+					continue;
+				}
+
+				try
                 {
                     var process = Process.GetProcesses().First(x => x.MainWindowHandle == handle);
 
                     Debug.Print($"Check process with {handle} | {process.ProcessName}");
 
-                    if (miHoyo)
+                    if (isMiHoYo)
                     {
-                        if (!playing)
+                        if (!isPlaying)
                         {
-                            playing = true;
-                            clientImp.UpdateRpc("iconx", "Honkai Impact 3rd");
+                            isPlaying = true;
+                            delay = 30000;
+							clientImp.UpdateRpc("iconx", "Honkai Impact 3rd");
                             Debug.Print($"Set RichPresence to {process.ProcessName}");
                         }
                         else
@@ -86,7 +93,7 @@ internal static class Program
                 }
                 catch (Exception e)
                 {
-                    playing = false;
+                    isPlaying = false;
                     if (clientImp.CurrentPresence != null)
                     {
                         clientImp.ClearPresence();

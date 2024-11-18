@@ -1,0 +1,15 @@
+E:\Works\CodingWorks\Honkai-Impact-3rd-RPC\src\bin\Debug\StarRailDiscordRpc.exe.config
+E:\Works\CodingWorks\Honkai-Impact-3rd-RPC\src\bin\Debug\StarRailDiscordRpc.exe
+E:\Works\CodingWorks\Honkai-Impact-3rd-RPC\src\bin\Debug\StarRailDiscordRpc.pdb
+E:\Works\CodingWorks\Honkai-Impact-3rd-RPC\src\bin\Debug\DiscordRPC.dll
+E:\Works\CodingWorks\Honkai-Impact-3rd-RPC\src\bin\Debug\Newtonsoft.Json.dll
+E:\Works\CodingWorks\Honkai-Impact-3rd-RPC\src\bin\Debug\DiscordRPC.pdb
+E:\Works\CodingWorks\Honkai-Impact-3rd-RPC\src\bin\Debug\DiscordRPC.xml
+E:\Works\CodingWorks\Honkai-Impact-3rd-RPC\src\bin\Debug\Newtonsoft.Json.xml
+E:\Works\CodingWorks\Honkai-Impact-3rd-RPC\src\obj\Debug\HonkaiImpact3rdRpc.csproj.AssemblyReference.cache
+E:\Works\CodingWorks\Honkai-Impact-3rd-RPC\src\obj\Debug\StarRailDiscordRpc.Properties.Resources.resources
+E:\Works\CodingWorks\Honkai-Impact-3rd-RPC\src\obj\Debug\HonkaiImpact3rdRpc.csproj.GenerateResource.cache
+E:\Works\CodingWorks\Honkai-Impact-3rd-RPC\src\obj\Debug\HonkaiImpact3rdRpc.csproj.CoreCompileInputs.cache
+E:\Works\CodingWorks\Honkai-Impact-3rd-RPC\src\obj\Debug\HonkaiIm.BE33A1BB.Up2Date
+E:\Works\CodingWorks\Honkai-Impact-3rd-RPC\src\obj\Debug\StarRailDiscordRpc.exe
+E:\Works\CodingWorks\Honkai-Impact-3rd-RPC\src\obj\Debug\StarRailDiscordRpc.pdb

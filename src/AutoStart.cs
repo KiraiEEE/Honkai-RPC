@@ -15,12 +15,11 @@ internal static class AutoStart
 
             if (baseKey == null)
             {
-                // wtf?
                 Console.WriteLine(@"Cannot find HKCU\Software\Microsoft\Windows\CurrentVersion\Run");
                 return;
             }
 
-            baseKey.SetValue("StarRail-DiscordRpc", Assembly.GetEntryAssembly().Location);
+            baseKey.SetValue("HonkaiImpact3rd-DiscordRpc", Assembly.GetEntryAssembly().Location);
             Console.WriteLine("AutoStartup has been set.");
         }
         catch (Exception e)
@@ -38,7 +37,6 @@ internal static class AutoStart
 
             if (baseKey == null)
             {
-                // wtf?
                 Console.WriteLine(@"Cannot find HKCU\Software\Microsoft\Windows\CurrentVersion\Run");
                 return;
             }
@@ -61,7 +59,6 @@ internal static class AutoStart
 
             if (baseKey == null)
             {
-                // wtf?
                 Console.WriteLine(@"Cannot find HKCU\Software\Microsoft\Windows\CurrentVersion\Run");
                 return false;
             }
